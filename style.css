@@ -1,0 +1,232 @@
+:root {
+  --bg: #f0faff;
+  --card: #ffffff;
+  --text: #003366;
+  --accent: #3399ff;
+  --file-btn: #cce6ff;
+  --output-bg: #f2faff;
+}
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #e0e0e0;
+  --accent: #66b3ff;
+  --file-btn: #2a3c4d;
+  --output-bg: #262b33;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 128, 255, 0.2);
+  width: 95%;
+  max-width: 1100px;
+  padding: 40px 60px;
+  margin-top: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .main-card {
+    width: 95%;
+    padding: 30px 20px;
+  }
+}
+
+.toggle-container {
+  text-align: right;
+  width: 95%;
+  max-width: 1100px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+#themeToggle {
+  padding: 8px 18px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: #267acc;
+}
+
+/* New original logo using CSS */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #3399ff, #66b3ff);
+  border-radius: 50%;
+  box-shadow: 0 0 12px #3399ffaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 5px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: 10px;
+  left: 10px;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: white;
+  top: 38px;
+  left: 34px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  box-shadow: 0 0 4px white;
+}
+
+h1 {
+  color: var(--accent);
+  margin: 0;
+  font-size: 3.5rem;
+  user-select: none;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 19px;
+  margin-bottom: 25px;
+  user-select: none;
+}
+
+#inputFile {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  background-color: var(--file-btn);
+  color: var(--text);
+  padding: 14px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.custom-file-upload:hover {
+  background-color: #b3d9ff;
+}
+
+textarea {
+  width: 95%;
+  max-width: 700px;
+  height: 60px;
+  margin-bottom: 8px; /* Reduced margin for compactness */
+  padding: 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--accent);
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  resize: none;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #267acc;
+  outline: none;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  padding: 14px 28px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 12px; /* Reduced margin for compactness */
+  user-select: none;
+}
+
+button:hover {
+  background-color: #267acc;
+}
+
+.output-box {
+  background: var(--output-bg);
+  border: 1.5px solid var(--accent);
+  border-radius: 14px;
+  padding: 28px 30px;
+  min-height: 220px;
+  font-size: 19px;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  margin-top: 10px; /* Reduced margin to bring closer */
+  box-sizing: border-box;
+  max-width: 800px;
+  width: 95%;
+  user-select: text;
+}
+
+.divider {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  user-select: none;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text);
+  user-select: none;
+}

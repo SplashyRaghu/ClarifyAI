@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClarifyAI</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+  <div class="toggle-container">
+    <button id="themeToggle">🌙 Toggle Dark Mode</button>
+  </div>
+
+  <div class="main-card">
+    <div class="header">
+      <div class="logo">
+        <!-- Replaced book emoji with an SVG lightbulb icon -->
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <path d="M9 18h6" />
+          <path d="M10 22h4" />
+          <path d="M12 2a7 7 0 0 0-4 12.9 3 3 0 0 1 4 0A7 7 0 0 0 12 2z" />
+        </svg>
+      </div>
+      <h1>ClarifyAI</h1>
+      <p class="tagline">Understand More, Stress Less.</p>
+    </div>
+
+    <hr />
+
+    <label for="inputFile" class="custom-file-upload">📎 Upload a File (PDF, Screenshot, or Any Text)</label>
+    <input type="file" id="inputFile" accept="*/*" />
+
+    <textarea id="inputText" placeholder="Or type your question here..."></textarea>
+    <button id="sendBtn">🧠 Clarify It</button>
+
+    <div class="divider">⬇️ Response</div>
+    <div id="output" class="output-box">Your answer will appear here...</div>
+  </div>
+
+  <footer>
+    Made with 💡 by ClarifyAI
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
